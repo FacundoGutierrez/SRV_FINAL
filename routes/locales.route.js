@@ -9,6 +9,7 @@ const LocalesCtrl = require('./../controllers/locales.controllers');
 // definiendo rutas
 router.get('/', LocalesCtrl.getLocal);
 router.post('/', LocalesCtrl.createLocales);
+router.get('/no', LocalesCtrl.getLocalesN);
 
 router.put('/:id', LocalesCtrl.editLocales);
 router.delete('/:id', LocalesCtrl.deleteLocales);

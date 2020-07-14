@@ -7,6 +7,10 @@ LocalesCtrl.getLocal= async (req, res) => {
     locales = await Locales.find();
     res.json(locales);
 }
+LocalesCtrl.getLocalesN= async (req, res) => {
+    locales = await Locales.find({alquilado:false});
+    res.json(locales);
+}
 
 LocalesCtrl.createLocales = async (req, res) => {
     console.log("entro create Locales");

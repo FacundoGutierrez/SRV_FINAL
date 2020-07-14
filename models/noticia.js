@@ -10,7 +10,7 @@ const NoticiasSchema = new Schema({
     titulo: {type: String, required:true},
     descripcion: {type: String, required:true},
     fecha: {type: Date, required:true},
-    usuario: {type: Schema.Types.ObjectId, ref: Usuario},
+    usuario: {type: Schema.Types.ObjectId, ref: Usuario, required:true},
     vigente: {type: Boolean, require: true}
 
 })
