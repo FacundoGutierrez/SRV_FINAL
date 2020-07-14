@@ -1,10 +1,10 @@
-const Usuario = require('../models/Usuario'); 
+const Usuario = require('../models/usuario'); 
 
 
 const UsuariosCtrl = {}
 
 UsuariosCtrl.getUsuarios = async (req, res) => {
-    Usuarios = await Usuario.find({activo:true}).sort({usuario:-1});
+    Usuarios = await Usuario.find();
     res.json(Usuarios);
 }
 
@@ -30,9 +30,11 @@ UsuariosCtrl.loginUsuario = async (req, res)=>{
     } else {
     res.json({
     status: 1,
+    _id: user._id,
     message: "success",
     usuario: user.usuario,
-    perfinl: user.perfil });
+    perfil: user.perfil 
+});
     }
     })
    }

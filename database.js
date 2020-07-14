@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const URI = 'mongodb://localhost/pluki';
+const URI = 'mongodb://localhost/final-database';
 mongoose.connect(URI)
 .then(db=>console.log('DB is connected'))
 .catch(err=>console.error(err))
